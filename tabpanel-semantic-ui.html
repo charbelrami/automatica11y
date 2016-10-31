@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+  <title>automatica11y | Tab Panel - Semantic UI</title>
+  <link rel="stylesheet" href="https://unpkg.com/semantic-ui@2.2.4/dist/semantic.min.css">
+</head>
+
+<body>
+  <h1>Tab Panel - Semantic UI</h1>
+
+  <p>Navigate using arrow keys</p>
+
+  <h2>Before</h2>
+  <div class="ui top attached tabular menu">
+    <a class="item active" data-tab="first">First</a>
+    <a class="item" data-tab="second">Second</a>
+    <a class="item" data-tab="third">Third</a>
+  </div>
+  <div class="ui bottom attached tab segment active" data-tab="first">
+    First
+  </div>
+  <div class="ui bottom attached tab segment" data-tab="second">
+    Second
+  </div>
+  <div class="ui bottom attached tab segment" data-tab="third">
+    Third
+  </div>
+
+  <h2>After</h2>
+  <div data-a11y-tabpanel>
+    <div class="ui top attached tabular menu" data-a11y-tabpanel-tablist>
+      <a class="item active" data-tab="first-2" data-a11y-tabpanel-tab>First</a>
+      <a class="item" data-tab="second-2" data-a11y-tabpanel-tab>Second</a>
+      <a class="item" data-tab="third-2" data-a11y-tabpanel-tab>Third</a>
+    </div>
+    <div class="ui bottom attached tab segment active" data-tab="first-2" data-a11y-tabpanel-pane>
+      First
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="second-2" data-a11y-tabpanel-pane>
+      Second
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="third-2" data-a11y-tabpanel-pane>
+      Third
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/jquery@3.1.1/dist/jquery.min.js"></script>
+  <script src="https://unpkg.com/semantic-ui@2.2.4/dist/semantic.min.js"></script>
+  <script>
+    $('.menu .item').tab()
+  </script>
+  <script>
+    var automatica11yConfig = {
+      components: {
+        tabPanel: {
+          selected: {
+            enable: true,
+            tab: {
+              classes: ['active']
+            },
+            pane: {
+              classes: ['active']
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="dist/automatica11y.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+{
+  "name": "automatica11y",
+  "version": "0.0.0",
+  "description": "Automatic A11y",
+  "main": "automatica11y.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "ava",
+    "js-watch-compile": "watchify -t rollupify -t babelify src/index.js -o dist/automatica11y.js -d",
+    "js-lint": "xo",
+    "js-lint-fix": "xo --fix",
+    "js-compile-minify": "browserify -t rollupify -t babelify src/index.js | uglifyjs --compress --mangle --preamble=\"/* @license MIT. Copyright (c) 2016 Charbel Rami. All rights reserved. */\" -o dist/automatica11y.min.js -",
+    "server": "browser-sync start --server --files *.html dist/automatica11y.js",
+    "concurrently": "concurrently \"npm run js-watch-compile\" \"npm run server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charbelrami/automatica11y.git"
+  },
+  "keywords": [
+    "accessibility",
+    "a11y"
+  ],
+  "author": "Charbel Rami",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/charbelrami/automatica11y/issues"
+  },
+  "homepage": "https://github.com/charbelrami/automatica11y#readme",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "babelify": "^7.3.0",
+    "browser-env": "^2.0.15",
+    "browser-sync": "^2.17.5",
+    "browserify": "^13.1.1",
+    "concurrently": "^3.1.0",
+    "rollupify": "^0.3.5",
+    "uglify-js": "^2.7.4",
+    "watchify": "^3.7.0",
+    "xo": "^0.17.0"
+  },
+  "xo": {
+    "envs": [
+      "browser"
+    ],
+    "esnext": true,
+    "semicolon": false,
+    "space": true
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "./test/helpers/setup-browser-env.js"
+    ],
+    "babel": "inherit"
+  }
+}

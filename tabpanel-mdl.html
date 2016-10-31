@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+  <title>automatica11y | Tab Panel - Material Design Lite</title>
+  <link rel="stylesheet" href="https://unpkg.com/material-design-lite@1.2.1/material.min.css">
+</head>
+
+<body>
+  <h1>Tab Panel - Material Design Lite</h1>
+
+  <p>Navigate using arrow keys</p>
+
+  <h2>Before</h2>
+  <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+    <div class="mdl-tabs__tab-bar">
+      <a href="#starks-panel" class="mdl-tabs__tab is-active">Starks</a>
+      <a href="#lannisters-panel" class="mdl-tabs__tab">Lannisters</a>
+      <a href="#targaryens-panel" class="mdl-tabs__tab">Targaryens</a>
+    </div>
+
+    <div class="mdl-tabs__panel is-active" id="starks-panel">
+      <ul>
+        <li>Eddard</li>
+        <li>Catelyn</li>
+        <li>Robb</li>
+        <li>Sansa</li>
+        <li>Brandon</li>
+        <li>Arya</li>
+        <li>Rickon</li>
+      </ul>
+    </div>
+    <div class="mdl-tabs__panel" id="lannisters-panel">
+      <ul>
+        <li>Tywin</li>
+        <li>Cersei</li>
+        <li>Jamie</li>
+        <li>Tyrion</li>
+      </ul>
+    </div>
+    <div class="mdl-tabs__panel" id="targaryens-panel">
+      <ul>
+        <li>Viserys</li>
+        <li>Daenerys</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>After</h2>
+  <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" data-a11y-tabpanel>
+    <div class="mdl-tabs__tab-bar" data-a11y-tabpanel-tablist>
+      <a href="#starks-panel-2" class="mdl-tabs__tab is-active" data-a11y-tabpanel-tab>Starks</a>
+      <a href="#lannisters-panel-2" class="mdl-tabs__tab" data-a11y-tabpanel-tab>Lannisters</a>
+      <a href="#targaryens-panel-2" class="mdl-tabs__tab" data-a11y-tabpanel-tab>Targaryens</a>
+    </div>
+
+    <div class="mdl-tabs__panel is-active" id="starks-panel-2" data-a11y-tabpanel-pane>
+      <ul>
+        <li>Eddard</li>
+        <li>Catelyn</li>
+        <li>Robb</li>
+        <li>Sansa</li>
+        <li>Brandon</li>
+        <li>Arya</li>
+        <li>Rickon</li>
+      </ul>
+    </div>
+    <div class="mdl-tabs__panele" id="lannisters-panel-2" data-a11y-tabpanel-pane>
+      <ul>
+        <li>Tywin</li>
+        <li>Cersei</li>
+        <li>Jamie</li>
+        <li>Tyrion</li>
+      </ul>
+    </div>
+    <div class="mdl-tabs__panel" id="targaryens-panel-2" data-a11y-tabpanel-pane>
+      <ul>
+        <li>Viserys</li>
+        <li>Daenerys</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/material-design-lite@1.2.1/material.min.js"></script>
+  <script>
+    var automatica11yConfig = {
+      components: {
+        tabPanel: {
+          selected: {
+            enable: true,
+            tab: {
+              classes: ['is-active', 'selected']
+            },
+            pane: {
+              classes: ['is-active', 'selected']
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <script src="dist/automatica11y.js"></script>
+</body>
+
+</html>
