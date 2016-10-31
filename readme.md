@@ -87,6 +87,38 @@ yarn add automatica11y
   <script src="automatica11y.min.js"></script>
 </body>
 ```
+
+**automatica11y** adds all the necessary attributes
+
+```html
+<body>
+  <article>
+    <ul role="tablist">
+      <li tabindex="0" aria-selected="true" role="tab" id="automatica11y-tabpanel-0-tab-0" aria-controls="automatica11y-tabpanel-0-pane-0">Tab 0</li>
+      <li tabindex="-1" aria-selected="false" role="tab" id="automatica11y-tabpanel-0-tab-1" aria-controls="automatica11y-tabpanel-0-pane-1">Tab 1</li>
+      <li tabindex="-1" aria-selected="false" role="tab" id="automatica11y-tabpanel-0-tab-2" aria-controls="automatica11y-tabpanel-0-pane-2">Tab 2</li>
+      <li tabindex="-1" aria-selected="false" role="tab" id="automatica11y-tabpanel-0-tab-3" aria-controls="automatica11y-tabpanel-0-pane-3">Tab 3</li>
+    </ul>
+    <div>
+      <section aria-hidden="false" role="tabpanel" id="automatica11y-tabpanel-0-pane-0" aria-labelledby="automatica11y-tabpanel-0-tab-0">
+        ...
+      </section>
+      <section aria-hidden="true" role="tabpanel" id="automatica11y-tabpanel-0-pane-1" aria-labelledby="automatica11y-tabpanel-0-tab-1">
+        ...
+      </section>
+      <section aria-hidden="true" role="tabpanel" id="automatica11y-tabpanel-0-pane-2" aria-labelledby="automatica11y-tabpanel-0-tab-2">
+        ...
+      </section>
+      <section aria-hidden="true" role="tabpanel" id="automatica11y-tabpanel-0-pane-3" aria-labelledby="automatica11y-tabpanel-0-tab-3">
+        ...
+      </section>
+    </div>
+  </article>
+
+  <script src="automatica11y.min.js"></script>
+</body>
+```
+
 ### Configuration
 
 You can configure **automatica11y** using the object literal `automatica11yConfig`. You can omit any properties.
