@@ -29,7 +29,6 @@
     "url": "https://github.com/charbelrami/automatica11y/issues"
   },
   "homepage": "https://github.com/charbelrami/automatica11y#readme",
-  "private": true,
   "dependencies": {},
   "devDependencies": {
     "ava": "^0.16.0",
