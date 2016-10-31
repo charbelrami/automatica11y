@@ -4,7 +4,7 @@
 
 ## Important!
 
-Learning how to make your website accessible is highly encouraged. Understanding accessibility (aka a11y) is of paramount importance for web developers. See [Learn A11y](#learn-ally) section.
+Learning how to make your website accessible is highly encouraged. Understanding accessibility (aka a11y) is of paramount importance for web developers. See [Learn A11y](#learn-a11y) section.
 
 **automatica11y** is intended to help developers implement accessibility with the minimum amount of effort because an accessible web is urgent and will benefit everyone.
 
