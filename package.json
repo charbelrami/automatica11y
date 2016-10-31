@@ -1,6 +1,6 @@
 {
   "name": "automatica11y",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Automatic A11y",
   "main": "automatica11y.js",
   "directories": {
